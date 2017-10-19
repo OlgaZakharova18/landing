@@ -79,9 +79,11 @@ gulp.task('watch', function() {
     gulp.watch('source/styles/**/*.scss', gulp.series('styles:compile'));
 });
 
+
 gulp.task('default', gulp.series(
     'clean',
     gulp.parallel('templates:compile', 'styles:compile', 'sprite', 'copy'),
     gulp.parallel('watch', 'server')
     )
 );
+
